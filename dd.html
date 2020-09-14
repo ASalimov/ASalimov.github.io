@@ -13,130 +13,74 @@
 	</style>
 </head>
 <body style="background-color: #fff; color: #606060; font-family: Arial; font-size: 13px; line-height: 18px; margin: 0; min-width: 280px; width: 100%;">
-<div style="background-color: #fff; color: #606060; font-family: Arial; font-size: 13px; line-height: 18px; min-width: 280px; width: 100%; text-align: center;">
-    <div style="background-color: #000000; border-bottom: 5px solid #ffdd00; margin-left: auto; margin-right: auto; text-align: center;">
-        <table style="border-collapse: collapse; margin-left: auto; margin-right: auto; max-width: 600px; text-align: left; width: 100%;">
-            <tr>
-                <td style="padding-bottom: 15px; padding-left: 24px; padding-right: 20px; padding-top: 10px;">
-                    <table style="border-collapse: collapse; width: 100%;">
-                        <tr>
-                            <td style="padding-bottom: 0; padding-left: 2%; padding-right: 20px; padding-top: 6px;">
-                                <a style="display: inline-block;" href="https://www.westernunion.com/{{country}}/en/home.html">
-                                    <img style="border: none; vertical-align: middle;" src="{{static_path}}/logo.png" width="165px" height="33px" alt=""/>
-                                </a>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <table style="border-collapse: collapse; margin-left: auto; margin-right: auto; max-width: 600px; text-align: left;">
-        <tr>
-            <td style="padding-bottom: 20px; padding-left: 6%; padding-right: 8%; padding-top: 38px;">
-                <table style="border-collapse: collapse;">
-                    <tr>
-                        <td style="padding: 0; padding-top: 3px; color: #606060; font-family: Arial; font-size: 13px; line-height: 18px; vertical-align: top;">
 
-                            <h1 style="color: #333333; font-family: Arial; font-size: 14px; margin-bottom: 18px;">Dear {{first_name}} {{last_name}},</h1>
-                            <p>
-                                You are almost done. To finish setting up your updated profile, please verify your email by clicking on below link in order to receive further email communications:
-                            </p>
-                            <p>
-                                <b>Verification link: <a href="{{verification_link}}">{{verification_link}}</a></b>
-                            </p>
-                            <p>
-                                Once you verify your email, you can start using Western Union Online Money Transfer service.
-                            </p>
-                            <p>
-                                Thank you for choosing Western Union services. If you have questions, need help or assistance on other subjects please email  <a style="color: #43a7c8;" href="mailto:{{contact_email}}">{{contact_email}}</a> or call toll free number {{contact_phone}}, within the {{country_title}}, 24/7.
-                            </p>
-                            <br />
-                            <div>
-                                Western Union Team
-                            </div>
+	
+	<div id="readme" class="Box-body readme blob js-code-block-container p-5 p-xl-6 gist-border-0">
+    <article class="markdown-body entry-content container-lg" itemprop="text"><h1><a id="user-content-runs-jenkins-job-from-the-command-line" class="anchor" aria-hidden="true" href="#runs-jenkins-job-from-the-command-line"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Runs Jenkins job from the Command Line</h1>
 
-                            <br />
-                        </td>
-                        <td style="padding: 0; padding-left: 12px; vertical-align: top; width: 26%;">
-                            <img style="width: 100%;" src="{{static_path}}/icon-check.png" />
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td style="border-top: 1px solid #e6e6e6; color: #858585; font-family: Arial; font-size: 13px; line-height: 15px; padding-bottom: 15px; padding-left: 2%; padding-right: 0; padding-top: 35px;">
+<p>The utility starts a Jenkins build/job from the Command Line/Terminal.
+An execution will be like this:</p>
+<p><a target="_blank" rel="noopener noreferrer" href="/gocruncher/jbuilder/blob/master/assets/demo.gif"><img src="/gocruncher/jbuilder/raw/master/assets/demo.gif" alt="terminal demo" style="max-width:100%;"></a></p>
+<h2><a id="user-content-install" class="anchor" aria-hidden="true" href="#install"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Install</h2>
+<p>Fetch the <a href="https://github.com/gocruncher/jbuilder/releases">latest release</a> for your platform:</p>
+<h4><a id="user-content-linux" class="anchor" aria-hidden="true" href="#linux"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Linux</h4>
+<div class="highlight highlight-source-shell"><pre>sudo wget https://github.com/gocruncher/jbuilder/releases/download/v1.0.1/jbuilder-1.0.1-linux-amd64 -O /usr/local/bin/jb
+sudo chmod +x /usr/local/bin/jb</pre></div>
+<h4><a id="user-content-os-x-brew" class="anchor" aria-hidden="true" href="#os-x-brew"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>OS X brew</h4>
+<div class="highlight highlight-source-shell"><pre>brew tap gocruncher/tap
+brew install jb</pre></div>
+<h4><a id="user-content-os-x-bash" class="anchor" aria-hidden="true" href="#os-x-bash"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>OS X bash</h4>
+<div class="highlight highlight-source-shell"><pre>sudo curl -Lo /usr/local/bin/jb https://github.com/gocruncher/jbuilder/releases/download/v1.0.1/jbuilder-1.0.1-darwin-amd64
+sudo chmod +x /usr/local/bin/jb</pre></div>
+<h2><a id="user-content-getting-started" class="anchor" aria-hidden="true" href="#getting-started"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Getting Started</h2>
+<h3><a id="user-content-configure-access-to-multiple-jenkins" class="anchor" aria-hidden="true" href="#configure-access-to-multiple-jenkins"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Configure Access to Multiple Jenkins</h3>
+<div class="highlight highlight-source-shell"><pre>jb <span class="pl-c1">set</span> dev_jenkins --url <span class="pl-s"><span class="pl-pds">"</span>https://myjenkins.com<span class="pl-pds">"</span></span> --login admin --token 11aa0926784999dab5  </pre></div>
+<p>where the token is available in your personal configuration page of the Jenkins. Click your name on the top right corner on every page, then click "Configure" to see your API token.</p>
+<p>In case, when Jenkins is available without authorization:</p>
+<div class="highlight highlight-source-shell"><pre>jb <span class="pl-c1">set</span> dev_jenkins --url <span class="pl-s"><span class="pl-pds">"</span>https://myjenkins.com<span class="pl-pds">"</span></span>  </pre></div>
+<p>or just run the following command in dialog execution mode:</p>
+<div class="highlight highlight-source-shell"><pre>jb <span class="pl-c1">set</span> dev_jenkins</pre></div>
+<h3><a id="user-content-shell-autocompletion" class="anchor" aria-hidden="true" href="#shell-autocompletion"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Shell autocompletion</h3>
+<p>As a recommendation, you can enable shell autocompletion for convenient work. To do this, run following:</p>
+<div class="highlight highlight-source-shell"><pre><span class="pl-c"><span class="pl-c">#</span> for zsh completion:</span>
+<span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">'</span>source &lt;(jb completion zsh)<span class="pl-pds">'</span></span> <span class="pl-k">&gt;&gt;</span>~/.zshrc
 
-                <div style="display: inline-block; margin-bottom: 10px; margin-left: 7%;">
-                    <a style="text-decoration: none;" href="https://www.westernunion.com/{{country}}/en/find-locations.html">
-                        <table style="border-collapse: collapse; width: 135px;">
-                            <tr>
-                                <td style="padding: 0; padding-right: 10px; vertical-align: middle;">
-                                    <img src="{{static_path}}/ico-location.png" />
-                                </td>
-                                <td style="color: #333333; font-family: Arial; font-size: 13px; font-weight: bold; padding: 0; vertical-align: middle;">
-                                    Find a location
-                                </td>
-                            </tr>
-                        </table>
-                    </a>
-                </div>
-                <div style="display: inline-block; margin-bottom: 10px; margin-left: 7%;">
-                    <a style="text-decoration: none;" href="https://www.westernunion.com/global-service/track-transfer">
-                        <table style="border-collapse: collapse; width: 135px;">
-                            <tr>
-                                <td style="padding: 0; padding-right: 10px; vertical-align: middle;">
-                                    <img src="{{static_path}}/ico-tracking.png" />
-                                </td>
-                                <td style="color: #333333; font-family: Arial; font-size: 13px; font-weight: bold; padding: 0; vertical-align: middle;">
-                                    Track a Transfer
-                                </td>
-                            </tr>
-                        </table>
-                    </a>
-                </div>
-                <div style="display: inline-block; margin-bottom: 10px; margin-left: 7%;">
-                    <a style="text-decoration: none;" href="https://www.westernunion.com/{{country}}/en/frequently-asked-questions.html">
-                        <table style="border-collapse: collapse; width: 135px;">
-                            <tr>
-                                <td style="padding: 0; padding-right: 10px; vertical-align: middle;">
-                                    <img src="{{static_path}}/ico-info.png" />
-                                </td>
-                                <td style="color: #333333; font-family: Arial; font-size: 13px; font-weight: bold; padding: 0; vertical-align: middle;">
-                                    For more information
-                                </td>
-                            </tr>
-                        </table>
-                    </a>
-                </div>
-            </td>
-        </tr>
-    </table>
-    <div style="background-color: #000000; border-top: 5px solid #ffdd00; margin-left: auto; margin-right: auto; text-align: center;">
-        <table style="border-collapse: collapse; margin-left: auto; margin-right: auto; max-width: 600px; text-align: left; width: 100%;">
-            <tr>
-                <td style="color: #fff; font-family: Arial; font-size: 14px; line-height: 17px; padding-bottom: 8px; padding-left: 20px; padding-right: 20px; padding-top: 8px; text-align: right;">
-                    <span>Follow Western Union</span>
-                    <a href="https://www.facebook.com/WesternUnion" title=""><img src="{{static_path}}/social-facebook.png" style="border: none; margin-left: 10px; vertical-align: middle;" width="21px" height="17px" alt=""/></a>
-                    <a href="https://twitter.com/westernunion" title=""><img src="{{static_path}}/social-twitter.png" style="border: none; margin-left: 6px; vertical-align: middle;" width="21px" height="17px" alt=""/></a>
-                    <a href="http://www.youtube.com/westernunion" title=""><img src="{{static_path}}/social-youtube.png" style="border: none; margin-left: 6px; vertical-align: middle;" width="21px" height="17px" alt=""/></a>
-                </td>
-            </tr>
-        </table>
-    </div>
+<span class="pl-c"><span class="pl-c">#</span> for bash completion:</span>
+<span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">'</span>source &lt;(jb completion bash)<span class="pl-pds">'</span></span> <span class="pl-k">&gt;&gt;</span>~/.bashrc</pre></div>
+<p>if this does not work for some reason, try following command that might help you to figure out what is wrong:</p>
+<div class="highlight highlight-source-shell"><pre>jb completion check</pre></div>
+<h3><a id="user-content-examples" class="anchor" aria-hidden="true" href="#examples"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Examples</h3>
+<div class="highlight highlight-source-shell"><pre><span class="pl-c"><span class="pl-c">#</span> Configure Access to the Jenkins</span>
+jb <span class="pl-c1">set</span> dev-jenkins
 
-    <table style="border-collapse: collapse; margin-left: auto; margin-right: auto; max-width: 600px; text-align: left; width: 100%;">
-        <tr>
-            <td style="color: #606060; font-family: Arial; font-size: 11px; line-height: 15px; padding-bottom: 20px; padding-left: 20px; padding-right: 20px; padding-top: 10px; text-align: left;">
-                <p>This is a customer service email from Western Union. Please don’t reply to this email. If you believe this may be a fraudulent email, type <a style="color: #43a7c8;" href="https://www.westernunion.com/{{country}}">www.westernunion.com/{{country}}</a> directly into your browser.
-                    <br>
-                    <a style="color: #43a7c8;" href="https://www.westernunion.com/{{country}}/en/fraud-awareness.html">Learn more</a> about how to protect yourself from fraud.</p>
-                <p><a style="color: #43a7c8;" href="https://www.westernunion.com/{{country}}/en/legal/privacy-statement.html">Privacy Statement</a></p>
-                <p>© 2017 Western Union Holdings, Inc. All rights reserved.</p>
-            </td>
-        </tr>
-    </table>
-</div>
+<span class="pl-c"><span class="pl-c">#</span> Start 'app-build' job in the current Jenkins</span>
+jb run app-build
+
+<span class="pl-c"><span class="pl-c">#</span> Start 'web-build' job in Jenkins named prod</span>
+jb run -n prod web-build
+
+<span class="pl-c"><span class="pl-c">#</span> makes a specific Jenkins name by default</span>
+jb use PROD  </pre></div>
+<h2><a id="user-content-futures" class="anchor" aria-hidden="true" href="#futures"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Futures</h2>
+<ul>
+<li>cancellation job (Ctrl+C key)</li>
+<li>resize of the output (just press enter key)</li>
+<li>output of child jobs</li>
+</ul>
+<h2><a id="user-content-useful-packages" class="anchor" aria-hidden="true" href="#useful-packages"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Useful packages</h2>
+<ul>
+<li><a href="https://github.com/spf13/cobra">cobra</a> - library for creating powerful modern CLI</li>
+<li><a href="https://github.com/chalk/chalk">chalk</a> – Terminal string styling done right</li>
+<li><a href="https://github.com/superhawk610/bar">bar</a> - Flexible ascii progress bar.</li>
+</ul>
+<h2><a id="user-content-todos" class="anchor" aria-hidden="true" href="#todos"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Todos</h2>
+<ul>
+<li>add authorization by login/pass and through the RSA key</li>
+<li>support of a terminal window resizing</li>
+</ul>
+</article>
+  </div>
+	
+	
 </body>
 </html>
