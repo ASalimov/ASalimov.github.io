@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+		a {
+			color: #313131;
+			text-decoration: underline;
+		}
+		a:hover {
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body style="background-color: #fff; color: #606060; font-family: Arial; font-size: 13px; line-height: 18px; margin: 0; min-width: 280px; width: 100%;">
+
+	
+	<div id="readme" class="Box-body readme blob js-code-block-container p-5 p-xl-6 gist-border-0">
+    <article class="markdown-body entry-content container-lg" itemprop="text"><h1><a id="user-content-runs-jenkins-job-from-the-command-line" class="anchor" aria-hidden="true" href="#runs-jenkins-job-from-the-command-line"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Runs Jenkins job from the Command Line</h1>
+
+<p>The utility starts a Jenkins build/job from the Command Line/Terminal.
+An execution will be like this:</p>
+<p><a target="_blank" rel="noopener noreferrer" href="/gocruncher/jbuilder/blob/master/assets/demo.gif"><img src="/gocruncher/jbuilder/raw/master/assets/demo.gif" alt="terminal demo" style="max-width:100%;"></a></p>
+<h2><a id="user-content-install" class="anchor" aria-hidden="true" href="#install"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Install</h2>
+<p>Fetch the <a href="https://github.com/gocruncher/jbuilder/releases">latest release</a> for your platform:</p>
+<h4><a id="user-content-linux" class="anchor" aria-hidden="true" href="#linux"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Linux</h4>
+<div class="highlight highlight-source-shell"><pre>sudo wget https://github.com/gocruncher/jbuilder/releases/download/v1.0.1/jbuilder-1.0.1-linux-amd64 -O /usr/local/bin/jb
+sudo chmod +x /usr/local/bin/jb</pre></div>
+<h4><a id="user-content-os-x-brew" class="anchor" aria-hidden="true" href="#os-x-brew"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>OS X brew</h4>
+<div class="highlight highlight-source-shell"><pre>brew tap gocruncher/tap
+brew install jb</pre></div>
+<h4><a id="user-content-os-x-bash" class="anchor" aria-hidden="true" href="#os-x-bash"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>OS X bash</h4>
+<div class="highlight highlight-source-shell"><pre>sudo curl -Lo /usr/local/bin/jb https://github.com/gocruncher/jbuilder/releases/download/v1.0.1/jbuilder-1.0.1-darwin-amd64
+sudo chmod +x /usr/local/bin/jb</pre></div>
+<h2><a id="user-content-getting-started" class="anchor" aria-hidden="true" href="#getting-started"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Getting Started</h2>
+<h3><a id="user-content-configure-access-to-multiple-jenkins" class="anchor" aria-hidden="true" href="#configure-access-to-multiple-jenkins"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Configure Access to Multiple Jenkins</h3>
+<div class="highlight highlight-source-shell"><pre>jb <span class="pl-c1">set</span> dev_jenkins --url <span class="pl-s"><span class="pl-pds">"</span>https://myjenkins.com<span class="pl-pds">"</span></span> --login admin --token 11aa0926784999dab5  </pre></div>
+<p>where the token is available in your personal configuration page of the Jenkins. Click your name on the top right corner on every page, then click "Configure" to see your API token.</p>
+<p>In case, when Jenkins is available without authorization:</p>
+<div class="highlight highlight-source-shell"><pre>jb <span class="pl-c1">set</span> dev_jenkins --url <span class="pl-s"><span class="pl-pds">"</span>https://myjenkins.com<span class="pl-pds">"</span></span>  </pre></div>
+<p>or just run the following command in dialog execution mode:</p>
+<div class="highlight highlight-source-shell"><pre>jb <span class="pl-c1">set</span> dev_jenkins</pre></div>
+<h3><a id="user-content-shell-autocompletion" class="anchor" aria-hidden="true" href="#shell-autocompletion"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Shell autocompletion</h3>
+<p>As a recommendation, you can enable shell autocompletion for convenient work. To do this, run following:</p>
+<div class="highlight highlight-source-shell"><pre><span class="pl-c"><span class="pl-c">#</span> for zsh completion:</span>
+<span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">'</span>source &lt;(jb completion zsh)<span class="pl-pds">'</span></span> <span class="pl-k">&gt;&gt;</span>~/.zshrc
+
+<span class="pl-c"><span class="pl-c">#</span> for bash completion:</span>
+<span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">'</span>source &lt;(jb completion bash)<span class="pl-pds">'</span></span> <span class="pl-k">&gt;&gt;</span>~/.bashrc</pre></div>
+<p>if this does not work for some reason, try following command that might help you to figure out what is wrong:</p>
+<div class="highlight highlight-source-shell"><pre>jb completion check</pre></div>
+<h3><a id="user-content-examples" class="anchor" aria-hidden="true" href="#examples"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Examples</h3>
+<div class="highlight highlight-source-shell"><pre><span class="pl-c"><span class="pl-c">#</span> Configure Access to the Jenkins</span>
+jb <span class="pl-c1">set</span> dev-jenkins
+
+<span class="pl-c"><span class="pl-c">#</span> Start 'app-build' job in the current Jenkins</span>
+jb run app-build
+
+<span class="pl-c"><span class="pl-c">#</span> Start 'web-build' job in Jenkins named prod</span>
+jb run -n prod web-build
+
+<span class="pl-c"><span class="pl-c">#</span> makes a specific Jenkins name by default</span>
+jb use PROD  </pre></div>
+<h2><a id="user-content-futures" class="anchor" aria-hidden="true" href="#futures"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Futures</h2>
+<ul>
+<li>cancellation job (Ctrl+C key)</li>
+<li>resize of the output (just press enter key)</li>
+<li>output of child jobs</li>
+</ul>
+<h2><a id="user-content-useful-packages" class="anchor" aria-hidden="true" href="#useful-packages"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Useful packages</h2>
+<ul>
+<li><a href="https://github.com/spf13/cobra">cobra</a> - library for creating powerful modern CLI</li>
+<li><a href="https://github.com/chalk/chalk">chalk</a> – Terminal string styling done right</li>
+<li><a href="https://github.com/superhawk610/bar">bar</a> - Flexible ascii progress bar.</li>
+</ul>
+<h2><a id="user-content-todos" class="anchor" aria-hidden="true" href="#todos"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Todos</h2>
+<ul>
+<li>add authorization by login/pass and through the RSA key</li>
+<li>support of a terminal window resizing</li>
+</ul>
+</article>
+  </div>
+	
+	
+</body>
+</html>
